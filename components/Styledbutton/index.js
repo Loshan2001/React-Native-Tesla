@@ -3,27 +3,17 @@ import React from "react";
 import styles from "./style";
 const StyledButton = (props) => {
    const {type } = props
-  const backgroundcolor  = type === "primary" ? "black" : "white"
-  const textColor = type === "primary" ? "white" : "black"
+  const backgroundcolor  = type === "primary" ? "#171A20cc" : "#FFFFFFA6"
+  const textColor = type === "primary" ? "#FFFFFF" : "#171A20"
   return (
     <View style={styles.BtnContainer}>
       <Pressable
         style={[styles.CustomBtn, {backgroundColor : backgroundcolor}]}
-        onPress={() => {
-          console.log("hey there");
-        }}
+        onPress={props.onPress}
       >
-        <Text style={[styles.text,{color : textColor}]}>Custom Order</Text>
+        <Text style={[styles.text,{color : textColor}]}>{props.content}</Text>
       </Pressable>
-
-      <Pressable
-        style={[styles.CustomBtn,{backgroundColor : backgroundcolor}]}
-        onPress={() => {
-          console.log("hey there");
-        }}
-      >
-        <Text style={[styles.text, {color : textColor}]}>Existing Inventory</Text>
-      </Pressable>
+ 
     </View>
   );
 };
