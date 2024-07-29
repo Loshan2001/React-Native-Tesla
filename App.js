@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import CarItem from './components/CarItems';
+import Header from './components/Header';
 import CarList from './components/CarList';
 export default function App() {
   return (
@@ -8,6 +8,7 @@ export default function App() {
 
    
     <View style={styles.container}>
+      <Header/>
       <CarList/>
   
       
